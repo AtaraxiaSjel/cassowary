@@ -250,7 +250,7 @@ def full_rdp():
         share_root=cfgvars.config["rdp_share_root"],
         mflag="multimon" if multimon_enable else "span"
     )
-    logger.debug("Creating a full RDP session with commandline  : " + command)
+    logger.debug("Creating a full RDP session with commandline  : " + cmd_final)
     process = subprocess.Popen(["sh", "-c", "{}".format(cmd_final)])
     process.wait()
     logger.debug("Full RDP session ended !")
